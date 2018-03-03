@@ -21,7 +21,7 @@ public class MessengerBot {
 		//Chrome driver needed , download it and paste path to .exe file down here
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Michał\\Downloads\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver(options);
-		//assertion, if messengerbot is ran on slower computer, you can increaste pause interval
+		//assertion, if messengerbot is ran on slower computer, you can increase pause interval
         WebDriverWait wait = new WebDriverWait(driver, 3);
 
 		
@@ -45,8 +45,7 @@ public class MessengerBot {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='https://www.facebook.com/messages/t/1576951690")));
         driver.findElement(By.cssSelector("a[href*='https://www.facebook.com/messages/t/1576951690")).click();
 
-        /*WebElement allMess =  driver.findElement(By.className("_4djt"));
-        allMess.click();*/
+
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("_5rpu")));
         WebElement mssgbox =  driver.findElement(By.className("_5rpu"));
